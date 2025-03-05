@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo del biglietto - Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sezione Form della pagina -->
+    <div class="form-sc">
+        <h1>Calcolo Del Prezzo per il tuo biglietto</h1>
+       <form action="*" class="form" id="form-inp">
+        <div class="option-sc">
+            <input type="text" name="name-input" id="input-name" placeholder="Inserisci la tuo nome..">
+            <input type="number" name="age-input" id="input-km" placeholder="Inserisci i KM..">
+            <select name="gender-selct" id="input-select-gender">
+               <option value="Minorenne">Minorenne</option>
+               <option value="Maggiorenne">Maggiorenne</option>
+               <option value="Adulto">Adulto</option>
+            </select>
+        </div>
+         <div class="option-sc">
+            <p>Scegli le seguenti opzioni:</p>
+            <button name="submit-requist" id="button-sub">Genera</button>
+            <button id="reset-btn" name="reset-btn">Annulla</button>
+         </div>
+       </form>
+    </div>
+    <div id="bottom-container">
+        <div class="ticket-sc none">
+            <p>#Biglietto Passegero</p>
+            <div class="info-ticket">
+                <p id="name-txt">Nome:Gaetano</p>
+                <p id="age-txt">età: Maggiorenne</p>
+                <p id="type-txt">Tipo di Biglietto: TeenGo</p>
+                <p id="number-train-seat-txt">Posto: 73</p>
+                <p id="price-txt">Prezzo: $3.20</p>
+            </div>
+        </div>
+        <div class="text-bottom none">
+            <p>Grazie mille per l'ordinazione!!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

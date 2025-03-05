@@ -39,19 +39,57 @@ function HandleClickForm(e){
             calc_perc = (calc_km_op * 40) / 100;
             calc_perc.toFixed(2);
         }
-        console.log(`Biglietto è di ${value_name} è ${value_select} il suo costo principale è di $${calc_perc}`);
+        HandleTicketGen(value_name, value_select, calc_perc);
+       
     } else {
         window.alert('Valori negli input corrispondenti');
     }
 }
 
-//Creazione di Funzione sul relativo reset.
+//Implemantazione e interzione degli elementi nei respettivi nodi del DOM
+
+function HandleTicketGen(name, age, price){
+    const text_end = document.querySelector('.text-bottom');
+    const ticket_sc = document.querySelector('.ticket-sc');
+    let text_name = document.getElementById('name-txt');
+    let text_age = document.getElementById('age-txt');
+    let text_type_ticket = document.getElementById('type-txt');
+    let text_number_seat = document.getElementById('number-train-seat-txt');
+    let text_price = document.getElementById('price-txt');
+
+  if (ticket_sc.classList.contains('none')) {
+    ticket_sc.classList.remove('none');
+    text_end.classList.remove('none');
+  }
+    if (age === 'Minorenne') {
+        text_age.innerHTML = `Età:<b>${age}</b>`;
+        text_name.innerHTML = `Nome:<b>${name}</b>`;
+        text_price.innerHTML = `Prezzo:<b>$${price}</b>`;
+        text_type_ticket.innerHTML = `Tipo di Biglietto:<b>JuniorGo</b>`;
+        text_number_seat.innerHTML = `Posto:<b>${Math.floor(Math.random() * 20)}</b>`;
+    } else if(age === 'Maggiorenne'){
+        text_age.innerHTML = `Età:<b>${age}</b>`;
+        text_name.innerHTML = `Nome:<b>${name}</b>`;
+        text_price.innerHTML = `Prezzo:<b>$${price}</b>`;
+        text_type_ticket.innerHTML = `Tipo di Biglietto:<b>TeenGo</b>`;
+        text_number_seat.innerHTML = `Posto:<b>${Math.floor(Math.random() * 20)}</b>`;
+    } else if(age === 'Adulti'){
+        text_age.innerHTML = `Età:<b>${age}</b>`;
+        text_name.innerHTML = `Nome:<b>${name}</b>`;
+        text_price.innerHTML = `Prezzo:<b>$${price}</b>`;
+        text_type_ticket.innerHTML = `Tipo di Biglietto:<b>TrenoPass</b>`;
+        text_number_seat.innerHTML = `Posto:<b>${Math.floor(Math.random() * 20)}</b>`;
+    }
+}
+
+//Creazione di funzione del reset in questione
 
 function HandleClickReset(e){
     e.preventDefault();
     Form_Inp_sc.reset();
 }
 
+//Collegazione delle seguenti funzioni agli eventi
 Form_Inp_sc.addEventListener('submit', (e)=>{ e.preventDefault()});
 Inp_btn_gen.addEventListener('click', HandleClickForm);
 Inp_btn_reset.addEventListener('click', HandleClickReset);
