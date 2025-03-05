@@ -1,0 +1,45 @@
+/* CSS di Struttura della pagina */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-sc{
+    width: 100%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.form{
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.option-sc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.option-sc input[type = "text"], .option-sc input[type = "number"], .option-sc select{
+    padding: 6px;
+}
+
+.option-sc input[type = "button"], button{
+    padding: 5px;
+    cursor: pointer;
+}
