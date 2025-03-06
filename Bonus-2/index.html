@@ -33,7 +33,7 @@
             </li>
         </ul>
     </nav>
-    <header class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="container-navbar">
             <div class="box-logo-hd-sc">
@@ -108,10 +108,36 @@
             </button>
           </div>
     </div>
-    <div class="container-lg">
-        <div class="container-fluid">
-            <i class="fa-solid fa-ticket"></i>
-            <h4>Calcolo del Biglietto</h4>
+    <div class="container-lg ticket-section">
+        <div class="container-md title-ticket-sc">
+            <h4> <i class="fa-solid fa-ticket"></i> Calcolo del Biglietto</h4>
+            <a href="#">Per Maggiori informazioni</a>
+        </div>
+        <div class="container-lg form-box">
+          <form action="*" class="form" id="form-inp">
+            <div class="option-sc">
+                <div class="inp-sec">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" name="name-input" id="input-name" placeholder="Inserisci la tuo nome..">
+                </div>
+                <div class="inp-sec">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="number" name="age-input" id="input-km" placeholder="Inserisci i KM..">
+                </div>
+                <select name="gender-selct" id="input-select-gender">
+                   <option value="Minorenne">Minorenne</option>
+                   <option value="Maggiorenne">Maggiorenne</option>
+                   <option value="Adulto">Adulto</option>
+                </select>
+            </div>
+             <div class="option-sc req">
+                <p>Scegli le seguenti opzioni:</p>
+                 <div class="cont-btn">
+                    <button name="submit-requist" id="button-sub">Genera</button>
+                    <button id="reset-btn" name="reset-btn">Annulla</button>
+                 </div>
+             </div>
+           </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

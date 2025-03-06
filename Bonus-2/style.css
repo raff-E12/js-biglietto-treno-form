@@ -112,6 +112,10 @@
     color: #2C5DBF;
 }
 
+.navbar.navbar-expand-lg{
+    background-color: #f2f2f2;
+}
+
 .navbar-toggler.ham-icon{
     border: none;
 }
@@ -155,7 +159,7 @@
     align-items: center;
     gap: 2px;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: underline;
     color: #BF1F1F;
 }
 
@@ -183,4 +187,162 @@
 .carosel-txt.par{
     font-weight: 500;
     font-size: 1em;
+}
+
+/* Ticket Section */
+
+.title-ticket-sc{
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-ticket-sc h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 3px;
+    font-weight: 800;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #BF1F1F;
+}
+
+.title-ticket-sc a{
+    text-decoration: underline;
+    color: #363638;
+    text-transform: capitalize;
+    font-size: 1em;
+}
+
+/* Ticket Form */
+
+.ticket-section{
+    padding: 10px;
+}
+
+.form-box{
+    background-color: #C9CCCE;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 19px;
+}
+
+.option-sc{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#input-name, #input-km{
+    width: 500px;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+#input-select-gender{
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: 700;
+}
+
+#input-select-gender, #input-name, #input-km:focus{
+    border: none;
+    outline: none;
+}
+
+.inp-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.inp-sec i{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #BF1F1F;
+    flex-direction: row;
+}
+
+.option-sc.req{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.option-sc.req p{
+    margin: 0;
+}
+
+.option-sc.req .cont-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.option-sc.req .cont-btn button{
+    width: 300px;
+    padding: 8px;
+    border: none;
+    background-color: #BF1F1F;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.option-sc.req .cont-btn button:active{
+    background-color: #8e0c0c;
+}
+
+@media (min-width: 310px) and (max-width: 809px) {
+
+    .form{
+        padding: 24px;
+    }
+
+    #input-name, #input-km{
+        width: 100%;
+    }
+
+    .option-sc{
+        flex-direction: column;
+    }
+
+    .option-sc.req .cont-btn button{
+        width: 50%;
+    }
+
+    #input-select-gender{
+        width: 60%;
+    }
 }
