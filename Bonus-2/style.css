@@ -223,6 +223,11 @@
 
 .ticket-section{
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form-box{
@@ -344,5 +349,248 @@
 
     #input-select-gender{
         width: 60%;
+    }
+}
+
+/*Ticket Section */
+
+#bottom-container{
+    padding: 10px;
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticket-sc{
+    border: 1px solid #363638;
+    display: flex;
+    background-color: #efefef;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ticket-sc p{
+    margin: 0;
+}
+
+.info-ticket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.index-img{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.ticket-top-index{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+
+.index-tk{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.index-tk small{
+    font-weight: 900;
+}
+
+.info-ticket{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 12px;
+}
+
+#name-txt{
+    font-size: 1.1em;
+    display: flex;
+    font-weight: 500;
+    text-transform: capitalize;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+#name-txt b{
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #105f24;
+}
+
+#age-txt{
+    font-size: 1.1em;
+    display: flex;
+    font-weight: 500;
+    text-transform: capitalize;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+#age-txt b{
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #105f24;
+}
+
+#type-txt{
+    font-size: 1.1em;
+    display: flex;
+    font-weight: 500;
+    text-transform: capitalize;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+#type-txt b{
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #105f24;
+}
+
+#number-train-seat-txt{
+    font-size: 1.1em;
+    display: flex;
+    font-weight: 500;
+    color: #363638;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#number-train-seat-txt b{
+    font-size: 1.1em;
+    font-weight: 900;
+    color: #105f24;
+}
+
+#price-txt{
+    font-size: 1.1em;
+    display: flex;
+    font-weight: 700;
+    color: rgba(82, 82, 82, 0.681);
+    text-transform: capitalize;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#price-txt b{
+    font-family: "Lato", sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    color: #8e0c0c;
+}
+
+.text-bottom{
+    width: 50%;
+    background-color: #8e0c0c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text-bottom p{
+    margin: 0;
+}
+
+.ticket-sc.none, .text-bottom.none{
+    display: none;
+}
+
+/* Footer Section */
+
+.footer-sc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C9CCCE;
+    padding: 20px;
+}
+
+.footer-sc h4{
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #363638;
+}
+
+@media (min-width: 360px) and (max-width: 679px) {
+    .ticket-top-index{
+        display: none;
+    }
+
+    .info-ticket{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+        padding: 0;
+    }
+
+    #name-txt, #age-txt, #type-txt , #number-train-seat-txt{
+        font-size: 1em;
+    }
+
+    #bottom-container{
+        height: 400px;
+    }
+
+    .ticket-sc{
+     border-radius: 30px;
+    }
+}
+
+@media (min-width:100px) and (max-width:360px) {
+    .info-ticket{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ticket-top-index{
+        display: none;
+    }
+
+    .ticket-sc{
+        border-radius: 30px;
+    }
+
+    #bottom-container{
+        height: 700px;
+    }
+
+    #name-txt, #age-txt, #type-txt , #number-train-seat-txt{
+        align-items: center;
     }
 }
