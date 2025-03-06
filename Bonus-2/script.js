@@ -15,6 +15,7 @@ let Inp_select_gender = document.getElementById('input-select-gender');
 const Inp_btn_gen = document.getElementById('button-sub');
 const Inp_btn_reset = document.getElementById('reset-btn');
 const Form_Inp_sc = document.getElementById('form-inp');
+let ticket_set_number = null;
 
 //Creazione sul relativo procedimento di calcolo del biglietto
 
@@ -24,9 +25,13 @@ function HandleClickForm(e){
     let value_name = Inp_name_user.value;
     let value_km = Number(Inp_km_user.value);
     let value_select = Inp_select_gender.value;
-    let ticket_set_number = Math.ceil(Math.random() * 20);
     let calc_km_op = 0;
     let calc_perc = 0;
+
+    if (ticket_set_number === null) { 
+        ticket_set_number = Math.ceil(Math.random() * 20);
+    }
+
     if (value_name !== '' && value_km !== 0 && value_select !== '') {
         if (value_select === 'Minorenne') {
             calc_km_op = value_km * base_km_bg;
