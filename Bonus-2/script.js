@@ -36,15 +36,15 @@ function HandleClickForm(e){
         if (value_select === 'Minorenne') {
             calc_km_op = value_km * base_km_bg;
             calc_perc = (calc_km_op * 20) / 100;
-            calc_perc.toFixed(2);
+            calc_perc.toFixed(3);
         } else if(value_select === 'Maggiorenne'){
             calc_km_op = value_km * base_km_bg;
             calc_perc = (calc_km_op * 30) / 100;
-            calc_perc.toFixed(2);
+            calc_perc.toFixed(3);
         } else if (value_select === 'Adulto'){
             calc_km_op = value_km * base_km_bg;
             calc_perc = (calc_km_op * 40) / 100;
-            calc_perc.toFixed(2);
+            calc_perc.toFixed(3);
         }
         HandleTicketGen(value_name, value_select, calc_perc, ticket_set_number);
        
@@ -58,6 +58,7 @@ function HandleClickForm(e){
 function HandleTicketGen(name, age, price, set){
     const text_end = document.querySelector('.text-bottom');
     const ticket_sc = document.querySelector('.ticket-sc');
+    let text_price_num = price.toString();
     let text_name = document.getElementById('name-txt');
     let text_age = document.getElementById('age-txt');
     let text_type_ticket = document.getElementById('type-txt');
@@ -71,22 +72,23 @@ function HandleTicketGen(name, age, price, set){
     if (age === 'Minorenne') {
         text_age.innerHTML = `Età:<b>${age}</b>`;
         text_name.innerHTML = `Nome:<b>${name}</b>`;
-        text_price.innerHTML = `Prezzo:<b>€${price + '0'}</b>`;
+        text_price.innerHTML = `Prezzo:<b>€${text_price_num}</b>`;
         text_type_ticket.innerHTML = `Tipo di Biglietto:<b>JuniorGo</b>`;
         text_number_seat.innerHTML = `<b>${set}</b><i class="fa-solid fa-couch"></i>`;
     } else if(age === 'Maggiorenne'){
         text_age.innerHTML = `Età:<b>${age}</b>`;
         text_name.innerHTML = `Nome:<b>${name}</b>`;
-        text_price.innerHTML = `Prezzo:<b>€${price + '0'}</b>`;
+        text_price.innerHTML = `Prezzo:<b>€${text_price_num}</b>`;
         text_type_ticket.innerHTML = `Tipo di Biglietto:<b>TeenGo</b>`;
         text_number_seat.innerHTML = `<b>${set}</b><i class="fa-solid fa-couch"></i>`;
     } else if(age === 'Adulto'){
         text_age.innerHTML = `Età <b>${age}</b>`;
         text_name.innerHTML = `Nome <b>${name}</b>`;
-        text_price.innerHTML = `Prezzo: <b>€${price + '0'}</b>`;
+        text_price.innerHTML = `Prezzo: <b>€${text_price_num}</b>`;
         text_type_ticket.innerHTML = `Tipo di Biglietto <b>TrenoPass</b>`;
         text_number_seat.innerHTML = `<b>${set}</b><i class="fa-solid fa-couch"></i>`;
     }
+    console.log(text_price_num);
 }
 
 //Creazione di funzione del reset in questione
